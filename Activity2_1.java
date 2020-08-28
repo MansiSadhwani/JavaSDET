@@ -8,7 +8,7 @@ public static void main(String[] args) {
 		MyBook newNovel = new MyBook();
 		newNovel.setTitle(title);
 		
-		System.out.println("Title of the book is: "+title);
+		System.out.println("Title of the book is: "+newNovel.getTitle());
 		
 	}
 
