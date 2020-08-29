@@ -22,7 +22,7 @@ public interface BicycleOperations {
 	
 
 }
-/* CLASS Bicycle */
+/* Class Bicycle */
 
 package Activity2_3;
 
@@ -56,7 +56,7 @@ public class Bicycle implements BicycleParts,BicycleOperations
 	}
 }
 
-/* CLASS MountainBike */
+/* Class MountainBike */
 
 package Activity2_3;
 
@@ -83,7 +83,7 @@ public class MountainBike extends Bicycle
 
 }
 
-/*Class driver*?
+/*Class driver*/
 
 package Activity2_3;
 
