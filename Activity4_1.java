@@ -11,9 +11,9 @@ public class Activity4_1 {
 		Scanner scan = new Scanner(System.in);
 		ArrayList<Integer> list = new ArrayList<Integer>();
 		Random indexGen=new Random();
-		
+	
 		System.out.println("Enter the Array values: ");
-		System.out.println("\n Enter non integer to terminate: ");
+		System.out.println("(Enter any alphabet when you wish to terminate) ");
 		
 		while(scan.hasNextInt())
 		{
@@ -23,7 +23,7 @@ public class Activity4_1 {
 		Integer nums[] = list.toArray(new Integer[0]);
 		int index = indexGen.nextInt(nums.length);
 		System.out.println("Index generated: "+ index);
-		System.out.println("Value generated at Index: "+ index + "is: "+nums[index]);
+		System.out.println("Value generated at Index: "+ index + " is: "+nums[index]);
 		scan.close();
 		
 		
