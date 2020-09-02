@@ -9,15 +9,17 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.*;
 
 
-public class Activity4_3 {
+public class Activity4_3
+{
 	
 
 	private static String filepath = "C://SDET//Input.xlxs";
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		
 		XSSFWorkbook xwb = new XSSFWorkbook();
-		XSSFSheet Sh = xwb.getSheet("");
+		XSSFSheet Sh = xwb.getSheet("Datatypes in Java");
 		
 		Object[][] datatypes = {
 			    {"Datatype", "Type", "Size(in bytes)"},
@@ -40,24 +42,27 @@ public class Activity4_3 {
 		        if (field instanceof String) 
 		        {
 		            cell.setCellValue((String) field);
-		        } else if (field instanceof Integer) {
+		        } else if (field instanceof Integer)
+			{
 		            cell.setCellValue((Integer) field);
 		        }
 		    }
-		    try {
+		}
+		    try
+		    {
 	            FileOutputStream outputStream = new FileOutputStream(filepath);
 	            xwb.write(outputStream);
 	            xwb.close();
-	        } catch (FileNotFoundException e) 
-          {
+	        } catch (FileNotFoundException e)
+		    {
 	            e.printStackTrace();
-	        } 
-          catch (IOException e) 
-          {
+	        }
+		    catch (IOException e) 
+		    {
 	            e.printStackTrace();
 	        }
 
-		}
+		
 		
 		
 
