@@ -6,20 +6,20 @@ import java.io.IOException;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.xssf.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
-public class Activity4_3
-{
+
+public class Activity4_3 {
 	
 
-	private static String filepath = "C://SDET//Input.xlxs";
+	private static final String filepath = "C://SDET//Input.xlsx";
 
-	public static void main(String[] args) 
-	{
+	public static void main(String[] args) {
 		
 		XSSFWorkbook xwb = new XSSFWorkbook();
-		XSSFSheet Sh = xwb.getSheet("Datatypes in Java");
+		XSSFSheet Sh = xwb.createSheet("Datatypes in Java");
 		
 		Object[][] datatypes = {
 			    {"Datatype", "Type", "Size(in bytes)"},
@@ -42,8 +42,7 @@ public class Activity4_3
 		        if (field instanceof String) 
 		        {
 		            cell.setCellValue((String) field);
-		        } else if (field instanceof Integer)
-			{
+		        } else if (field instanceof Integer) {
 		            cell.setCellValue((Integer) field);
 		        }
 		    }
